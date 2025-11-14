@@ -23,8 +23,9 @@ jobs:
           node-version: 22.x
           cache: npm
 
-      - name: Install deps
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
+
 
       - name: Build (with base path for Pages)
         run: npm run build -- --base=/${{ github.event.repository.name }}/ --mode=development
